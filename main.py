@@ -1,3 +1,6 @@
+import turtle
+import tkinter
+
 from turtle import Screen
 from ball import Ball
 from paddle import Paddle
@@ -9,6 +12,9 @@ screen = Screen()
 screen.bgcolor("gray11")
 screen.setup(width=800, height=600)
 screen.title("Pong")
+img = tkinter.Image("photo", file="assets/pong.png")
+turtle._Screen._root.iconphoto(True, img)
+
 screen.tracer(0)
 
 r_paddle = Paddle((350, 0))
